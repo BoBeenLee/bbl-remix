@@ -3,6 +3,9 @@
   functions = "netlify/functions"
   publish = "public"
 
+[build.environment]
+  NODE_VERSION = "16.13.0"
+
 [dev]
   command = "remix watch"
   port = 3000
@@ -16,3 +19,6 @@
   for = "/build/*"
   [headers.values]
     "Cache-Control" = "public, max-age=31536000, s-maxage=31536000"
+
+[functions]
+  included_files = ["posts/**"]
