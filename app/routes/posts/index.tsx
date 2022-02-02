@@ -7,12 +7,13 @@ export type Post = {
 };
 
 export const loader = async () => {
-  return getPosts();
+  const response = await getPosts();
+  const filteredPublished = response.filter((item) => Boolean(item.published));
+  return filteredPublished;
 };
 
 export default function Posts() {
   const posts = useLoaderData<Post[]>();
-  console.log(posts);
   return (
     <div>
       <ul>
