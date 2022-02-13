@@ -4,13 +4,18 @@ import { promises as fs } from "fs";
 import parseFrontMatter from "front-matter";
 import { marked } from "marked";
 
-export type Post = {
+export type PostItem = {
   slug: string;
+  html?: string;
   title: string;
+  url: string;
+  date: string;
+  published: boolean;
 };
 
 export type PostMarkdownAttributes = {
   title: string;
+  path: string;
   date: string;
   published: boolean;
 };
@@ -30,6 +35,7 @@ export async function getPosts() {
       return {
         slug: filename.replace(/\.md$/, ""),
         title: attributes.title,
+        url: attributes.path,
         date: attributes.date,
         published: attributes.published,
       };
@@ -48,6 +54,7 @@ export async function getPost(slug: string) {
     slug,
     html,
     title: attributes.title,
+    url: attributes.path,
     date: attributes.date,
     published: attributes.published,
   };

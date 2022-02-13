@@ -12,8 +12,8 @@ import { toDateTimeText } from "~/utils/datetime";
 interface IProps {
   title: string;
   date: string;
-  url: string;
-  linkUrl: string;
+  url?: string;
+  linkUrl?: string;
 }
 
 const Root = styled.div`
