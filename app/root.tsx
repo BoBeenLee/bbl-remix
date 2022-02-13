@@ -4,10 +4,21 @@ import {
   Meta,
   Outlet,
   Scripts,
+  LinksFunction,
   ScrollRestoration,
 } from "remix";
 import type { MetaFunction } from "remix";
 import { getMetadata } from "./constants/metadata";
+import globalStylesUrl from "~/styles/global.css";
+
+export const links: LinksFunction = () => {
+  return [
+    {
+      rel: "stylesheet",
+      href: globalStylesUrl,
+    },
+  ];
+};
 
 export const meta: MetaFunction = (args) => {
   const { data } = args;
