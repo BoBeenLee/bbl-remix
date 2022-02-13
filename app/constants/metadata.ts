@@ -1,7 +1,5 @@
 import _ from "lodash";
 
-const isProduction = true;
-
 const metadataItem = {
   description: "BoBeen Lee",
   keywords: "BoBeenLee, ReactJS, React Native, Javascript",
@@ -10,12 +8,13 @@ const metadataItem = {
   title: "BoBeen Lee",
   titleTemplate: "%s",
   backgroundColor: `#fff`,
-  themeColor: `#5191FD`
+  themeColor: `#5191FD`,
 };
 
 const siteMetadataMap = _.cond([
   [_.matches({ isProduction: false }), _.constant(metadataItem)],
-  [_.matches({ isProduction: true }), _.constant(metadataItem)]
+  [_.matches({ isProduction: true }), _.constant(metadataItem)],
 ]);
 
-export const metadata = siteMetadataMap({ isProduction });
+export const getMetadata = (isProduction: boolean) =>
+  siteMetadataMap({ isProduction });

@@ -4,12 +4,32 @@ import {
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration
+  ScrollRestoration,
 } from "remix";
 import type { MetaFunction } from "remix";
+import { getMetadata } from "./constants/metadata";
 
-export const meta: MetaFunction = () => {
-  return { title: "New Remix App" };
+export const meta: MetaFunction = (args) => {
+  const { data } = args;
+  const { title, description, site_url, keywords } = getMetadata(true);
+  const metaTitle = title;
+  const metaDescription = description;
+  const metaUrl = site_url;
+
+  return {
+    title,
+    description: metaDescription,
+    "og:type": "website",
+    "og:title": metaTitle,
+    "og:url": metaUrl,
+    "og:site_name": "BoBeenLee",
+    "og:description": metaDescription,
+    keywords,
+    "twitter:card": "summary",
+    "twitter:title": metaTitle,
+    "twitter:description": metaDescription,
+    "twitter:creator": "BoBeenLee",
+  };
 };
 
 export default function App() {
@@ -17,7 +37,10 @@ export default function App() {
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta
+          name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"
+        />
         <Meta />
         <Links />
         {typeof document === "undefined" ? "__STYLES__" : null}

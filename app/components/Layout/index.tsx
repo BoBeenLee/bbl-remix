@@ -9,7 +9,6 @@ import Header from "~/components/Header";
 import { BottomPopup } from "~/components/Popup";
 import theme from "~/styles/theme";
 import { dimension } from "~/styles/dimension";
-import SEO from "~/components/Layout/SEO";
 
 interface IProps {
   children: React.ReactNode;
@@ -67,7 +66,7 @@ class Layout extends Component<IProps, IStates> {
     super(props);
 
     this.state = {
-      isShowStatePopup: false
+      isShowStatePopup: false,
     };
   }
 
@@ -83,7 +82,6 @@ class Layout extends Component<IProps, IStates> {
     const { isShowStatePopup } = this.state;
     return (
       <Root id="outer-container">
-        <SEO />
         <StatePopupBox isShowStatePopup={isShowStatePopup}>
           <span>
             Your computer seems to be offline. We&apos;ll keep trying, but there
