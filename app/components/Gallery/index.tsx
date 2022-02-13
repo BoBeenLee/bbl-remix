@@ -1,1 +1,1 @@
-export { default as PhotoGallery } from "app/components/Gallery/PhotoGallery";
+export { default as PhotoGallery } from "~/components/Gallery/PhotoGallery";

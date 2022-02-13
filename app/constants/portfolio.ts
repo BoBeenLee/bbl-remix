@@ -1,9 +1,9 @@
 import _ from "lodash";
-import softhomeImages from "app/images/portfolio/softhome";
-import competitionImages from "app/images/portfolio/competition";
-import skhualarmImages from "app/images/portfolio/skhualarm";
-import intersectionImages from "app/images/portfolio/intersection";
-import houseImages from "app/images/portfolio/house";
+import softhomeImages from "~/images/portfolio/softhome";
+import competitionImages from "~/images/portfolio/competition";
+import skhualarmImages from "~/images/portfolio/skhualarm";
+import intersectionImages from "~/images/portfolio/intersection";
+import houseImages from "~/images/portfolio/house";
 
 export interface IProjectPortfolio {
   id: string;

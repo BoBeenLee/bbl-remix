@@ -1,1 +1,1 @@
-export { default as Seperator } from "app/components/Seperator/Seperator";
+export { default as Seperator } from "~/components/Seperator/Seperator";

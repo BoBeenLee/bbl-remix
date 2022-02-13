@@ -2,6 +2,15 @@
 
 - [Remix Docs](https://remix.run/docs)
 
+## Installing / Getting started
+
+A quick introduction of the minimal setup you need to get a RNApp up &
+running.
+
+```shell
+npm install --legacy-peer-deps
+```
+
 ## Netlify Setup
 
 1. Install the [Netlify CLI](https://www.netlify.com/products/dev/):

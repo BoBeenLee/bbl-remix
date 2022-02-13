@@ -1,2 +1,2 @@
-export { default as BottomPopup } from "app/components/Popup/BottomPopup";
-export { default as ImagePopup } from "app/components/Popup/ImagePopup";
+export { default as BottomPopup } from "~/components/Popup/BottomPopup";
+export { default as ImagePopup } from "~/components/Popup/ImagePopup";

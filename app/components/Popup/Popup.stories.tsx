@@ -3,8 +3,8 @@ import { storiesOf } from "@storybook/react";
 import React from "react";
 
 import styled from "styled-components";
-import { BottomPopup, ImagePopup } from "app/components/Popup";
-import images from "app/images";
+import { BottomPopup, ImagePopup } from "~/components/Popup";
+import images from "~/images";
 
 const Root = styled.div``;
 

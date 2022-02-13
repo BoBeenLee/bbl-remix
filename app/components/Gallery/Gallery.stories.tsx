@@ -2,9 +2,9 @@ import { action } from "@storybook/addon-actions";
 import { storiesOf } from "@storybook/react";
 import React from "react";
 import styled from "styled-components";
-import { PhotoGallery } from "app/components/Gallery";
-import { media } from "app/utils/media";
-import theme from "app/styles/theme";
+import { PhotoGallery } from "~/components/Gallery";
+import { media } from "~/utils/media";
+import theme from "~/styles/theme";
 
 const Root = styled.div`
   display: grid;

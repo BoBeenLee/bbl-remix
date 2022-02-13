@@ -1,7 +1,7 @@
 import _ from "lodash";
 import React, { PureComponent } from "react";
 import styled from "styled-components";
-import theme from "app/styles/theme";
+import theme from "~/styles/theme";
 
 interface IProps {
   className?: string;

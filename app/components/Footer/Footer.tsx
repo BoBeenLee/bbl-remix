@@ -6,8 +6,8 @@ import {
 import { MdContactMail as ContactMailIcon } from "react-icons/md";
 import styled from "styled-components";
 
-import { media } from "app/utils/media";
-import theme from "app/styles/theme";
+import { media } from "~/utils/media";
+import theme from "~/styles/theme";
 
 const Root = styled.div`
   display: grid;

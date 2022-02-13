@@ -2,7 +2,7 @@ import { action } from "@storybook/addon-actions";
 import { storiesOf } from "@storybook/react";
 import React from "react";
 import styled from "styled-components";
-import { GithubProfile } from "app/components/Profile";
+import { GithubProfile } from "~/components/Profile";
 
 const Root = styled.div`
   display: grid;

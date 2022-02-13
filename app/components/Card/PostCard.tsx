@@ -2,12 +2,12 @@ import { format } from "date-fns";
 import React, { PureComponent } from "react";
 import { GoBook as GoBookIcon } from "react-icons/go";
 import styled, { css } from "styled-components";
-import { media } from "app/utils/media";
+import { media } from "~/utils/media";
 
-import { Seperator } from "app/components/Seperator";
-import { SubTitle } from "app/components/Title";
-import theme from "app/styles/theme";
-import { toDateTimeText } from "app/utils/datetime";
+import { Seperator } from "~/components/Seperator";
+import { SubTitle } from "~/components/Title";
+import theme from "~/styles/theme";
+import { toDateTimeText } from "~/utils/datetime";
 
 interface IProps {
   title: string;

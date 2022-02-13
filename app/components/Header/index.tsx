@@ -2,14 +2,14 @@ import _ from "lodash";
 import React, { PureComponent } from "react";
 import Headroom from "react-headroom";
 import styled, { css } from "styled-components";
-import { menu as titles, theme } from "app/constants";
-import { media } from "app/utils/media";
-import { isIE } from "app/utils/navigator";
-import { Avatar } from "app/components/Avatar";
-import { Menu } from "app/components/Menu";
-import { Seperator } from "app/components/Seperator";
-import images from "app/images";
-import { dimension } from "app/styles/dimension";
+import { menu as titles, theme } from "~/constants";
+import { media } from "~/utils/media";
+import { isIE } from "~/utils/navigator";
+import { Avatar } from "~/components/Avatar";
+import { Menu } from "~/components/Menu";
+import { Seperator } from "~/components/Seperator";
+import images from "~/images";
+import { dimension } from "~/styles/dimension";
 
 interface IStates {
   isOpenHeader: boolean;

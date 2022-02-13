@@ -2,14 +2,14 @@ import _ from "lodash";
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import { media } from "app/utils/media";
-import { isBrowser } from "app/utils/navigator";
-import { Footer } from "app/components/Footer";
-import Header from "app/components/Header";
-import { BottomPopup } from "app/components/Popup";
-import theme from "app/styles/theme";
-import { dimension } from "app/styles/dimension";
-import SEO from "app/components/Layout/SEO";
+import { media } from "~/utils/media";
+import { isBrowser } from "~/utils/navigator";
+import { Footer } from "~/components/Footer";
+import Header from "~/components/Header";
+import { BottomPopup } from "~/components/Popup";
+import theme from "~/styles/theme";
+import { dimension } from "~/styles/dimension";
+import SEO from "~/components/Layout/SEO";
 
 interface IProps {
   children: React.ReactNode;

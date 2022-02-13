@@ -1,6 +1,6 @@
 import _ from "lodash";
 
-const isProduction = process.env.REACT_ENV === "production";
+const isProduction = true;
 
 const metadataItem = {
   description: "BoBeen Lee",

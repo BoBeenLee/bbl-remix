@@ -1,7 +1,7 @@
 import _ from "lodash";
 import React, { Component } from "react";
 import styled from "styled-components";
-import { theme } from "app/constants";
+import { theme } from "~/constants";
 
 interface IProps {
   name: string;

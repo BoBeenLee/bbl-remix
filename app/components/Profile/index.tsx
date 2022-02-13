@@ -1,1 +1,1 @@
-export { default as GithubProfile } from "app/components/Profile/GithubProfile";
+export { default as GithubProfile } from "~/components/Profile/GithubProfile";

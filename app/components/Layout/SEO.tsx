@@ -1,6 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { metadata } from "app/constants/metadata";
+import { metadata } from "~/constants/metadata";
 
 interface ISEOProps {
   description?: string;

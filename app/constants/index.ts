@@ -1,4 +1,4 @@
-import menu, { isHome } from "app/constants/menu";
-import theme from "app/styles/theme";
+import menu, { isHome } from "~/constants/menu";
+import theme from "~/styles/theme";
 
 export { theme, menu, isHome };

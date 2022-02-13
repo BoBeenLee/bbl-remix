@@ -1,1 +1,1 @@
-export { default as Avatar } from "app/components/Avatar/Avatar";
+export { default as Avatar } from "~/components/Avatar/Avatar";
