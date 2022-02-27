@@ -10,11 +10,9 @@ const Root = styled.div`
 class HomePage extends Component {
   public render() {
     return (
-      <Layout>
-        <Root>
-          <Rotate />
-        </Root>
-      </Layout>
+      <Root>
+        <Rotate />
+      </Root>
     );
   }
 }

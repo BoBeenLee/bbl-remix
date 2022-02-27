@@ -9,6 +9,7 @@ import {
 } from "remix";
 import type { MetaFunction } from "remix";
 import { getMetadata } from "./constants/metadata";
+import Layout from "~/components/Layout";
 import globalStylesUrl from "~/styles/global.css";
 
 export const links: LinksFunction = () => {
@@ -57,7 +58,9 @@ export default function App() {
         {typeof document === "undefined" ? "__STYLES__" : null}
       </head>
       <body>
-        <Outlet />
+        <Layout>
+          <Outlet />
+        </Layout>
         <ScrollRestoration />
         <Scripts />
         {process.env.NODE_ENV === "development" && <LiveReload />}

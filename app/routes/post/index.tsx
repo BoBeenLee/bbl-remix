@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 import { getPosts, PostItem } from "~/post";
 import { PostCard } from "~/components/Card";
-import Layout from "~/components/Layout";
 
 const Root = styled.div`
   padding-top: 20px;
@@ -20,12 +19,10 @@ export default function Posts() {
   const posts = useLoaderData<PostItem[]>();
   // const postsByDESC = _.orderBy(posts, ["date"], ["desc"]);
   return (
-    <Layout>
-      <Root>
-        {_.map(posts, item => (
-          <PostCard key={item.slug} {...item} />
-        ))}
-      </Root>
-    </Layout>
+    <Root>
+      {_.map(posts, (item) => (
+        <PostCard key={item.slug} {...item} />
+      ))}
+    </Root>
   );
 }

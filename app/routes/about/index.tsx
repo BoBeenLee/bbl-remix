@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import Layout from "~/components/Layout";
 import { Activity, Education, Experience, Skill } from "~/organizations/about";
 
 const Root = styled.div`
@@ -11,14 +10,12 @@ const Root = styled.div`
 class AboutPage extends Component {
   public render() {
     return (
-      <Layout>
-        <Root>
-          <Experience />
-          <Activity />
-          <Skill />
-          <Education />
-        </Root>
-      </Layout>
+      <Root>
+        <Experience />
+        <Activity />
+        <Skill />
+        <Education />
+      </Root>
     );
   }
 }

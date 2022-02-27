@@ -55,27 +55,33 @@ function firebaseAnalyticsFactory(
     },
     test: () => {
       firebaseLogEvent({
-        eventType: "test"
+        eventType: "test",
       });
-    }
+    },
   };
 }
 
 export const firebaseAnalytics = _.once(() => {
   const logEvent = (eventName: string, params: Record<string, any>) => {
-    firebaseInstance()
-      .analytics()
-      .logEvent(eventName, params);
+    const instance = firebaseInstance();
+    if (!instance) {
+      return;
+    }
+    instance.analytics().logEvent(eventName, params);
   };
   const setUserId = (userId: string) => {
-    firebaseInstance()
-      .analytics()
-      .setUserId(userId);
+    const instance = firebaseInstance();
+    if (!instance) {
+      return;
+    }
+    instance.analytics().setUserId(userId);
   };
   const setCurrentScreen = (screenName: string) => {
-    firebaseInstance()
-      .analytics()
-      .setCurrentScreen(screenName);
+    const instance = firebaseInstance();
+    if (!instance) {
+      return;
+    }
+    instance.analytics().setCurrentScreen(screenName);
   };
   return firebaseAnalyticsFactory(logEvent, setUserId, setCurrentScreen);
 });
